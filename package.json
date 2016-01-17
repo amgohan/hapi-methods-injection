@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "lab -c -L",
-    "coverage": "lab -c -L -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+    "coverage": "lab -c -L -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html",
     "ci-coverage": "lab -c -L -r lcov | ./node_modules/.bin/coveralls"
   },
   "repository": {
