@@ -1,6 +1,6 @@
 {
   "name": "hapi-methods-injection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Scan and register automatically your hapi methods",
   "main": "index.js",
   "scripts": {
