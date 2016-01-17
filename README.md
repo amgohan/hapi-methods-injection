@@ -11,7 +11,9 @@ You can use this plugin to scan specified directories and register all found fun
 
 ### Support
 - `Hapi >= 10`      - Use version `1.x`
-- 
+
+# Usage
+
 
 
 [travis-badge]: https://travis-ci.org/toymachiner62/hapi-authorization.svg?branch=master
