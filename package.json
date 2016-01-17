@@ -1,7 +1,7 @@
 {
   "name": "hapi-methods-injection",
   "version": "1.0.0",
-  "description": "Scan and register automatically Models, Services and Utils as hapi methods",
+  "description": "Scan and register automatically your hapi methods",
   "main": "index.js",
   "scripts": {
     "test": "lab -c -L",
