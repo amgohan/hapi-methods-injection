@@ -1,0 +1,44 @@
+{
+  "name": "hapi-methods-injection",
+  "version": "1.0.0",
+  "description": "Scan and register automatically Models, Services and Utils as hapi methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -c -L",
+    "coverage": "lab -c -L -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:amgohan/hapi-methods-injection.git"
+  },
+  "keywords": [
+    "hapi",
+    "hapijs",
+    "hapi methods",
+    "injection"
+  ],
+  "contributors": [
+    {
+      "name": "Sidi Amine Bouhamidi",
+      "email": "amine.bouhamidi@gmail.com",
+      "url": "https://www.linkedin.com/in/amgohan"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amgohan/hapi-methods-injection/issues"
+  },
+  "homepage": "https://github.com/amgohan/hapi-methods-injection",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "hapi": "11.x.x",
+    "code": "2.x.x",
+    "lab": "8.x.x"
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "joi": "^7.1.0"
+  }
+}
