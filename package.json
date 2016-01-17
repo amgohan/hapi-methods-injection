@@ -6,6 +6,7 @@
   "scripts": {
     "test": "lab -c -L",
     "coverage": "lab -c -L -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+    "ci-coverage": "lab -c -L -r lcov | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
@@ -33,8 +34,9 @@
     "node": ">=4.0.0"
   },
   "devDependencies": {
-    "hapi": "11.x.x",
     "code": "2.x.x",
+    "coveralls": "^2.11.6",
+    "hapi": "11.x.x",
     "lab": "8.x.x"
   },
   "dependencies": {
