@@ -57,7 +57,7 @@ module.export.createOrUpdate = function(user, next) {
 	next(null, userFromDb);
 };
 ```
-```createOrUpdate``` function will be registred by ```hapi-methods-injection``` module as Hapi method and can be accessed using : 
+```createOrUpdate``` function will be registred by ```hapi-methods-injection``` plugin as Hapi method and can be accessed using : 
 ```js
 server.methods.services.UserService.createOrUpdate(user, function(err, data){
 	...
@@ -65,7 +65,7 @@ server.methods.services.UserService.createOrUpdate(user, function(err, data){
 ```
 
 4. How to call a method inside another existing method :
--------------------------------------------------------------------
+--------------------------------------------------------
 
 assume that we have a Model file ```User.js``` in ```/server/api/models``` folder defined as :
  - **User.js** :
@@ -109,7 +109,6 @@ module.export.createOrUpdate = function(user, next) {
 			 });
 		 }
 	});
-	next(null, userFromDb);
 };
 ```
 [npm-badge]: https://badge.fury.io/js/hapi-methods-injection.svg
