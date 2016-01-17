@@ -15,13 +15,12 @@ You can use this plugin to scan specified directories and register all found fun
 
 # Usage
 
-1. Installation :
----------------------
+###1. Installation :
 
 ```npm install --save hapi-methods-injection```
 
-2. Plugin configuration :
--------------------------
+###2. Plugin configuration :
+
 ```js
  server.register({
   register: require('hapi-methods-injection'),
@@ -43,8 +42,7 @@ You can use this plugin to scan specified directories and register all found fun
 });
 ```
 
-3. Methods examples :
----------------------
+###3. Methods examples :
 
 assume that we have multiple services in ```/server/api/services``` folder like :
 
@@ -64,8 +62,7 @@ server.methods.services.UserService.createOrUpdate(user, function(err, data){
 });
 ```
 
-4. How to call a method inside another existing method :
---------------------------------------------------------
+###4. How to call a method inside another existing method :
 
 assume that we have a Model file ```User.js``` in ```/server/api/models``` folder defined as :
  - **User.js** :
@@ -111,6 +108,27 @@ module.export.createOrUpdate = function(user, next) {
 	});
 };
 ```
+###5. Declaring Hapi options for a specific method :
+
+Adding cache capability to ```User.get(id, next)``` :
+- User.js :
+```js
+module.exports.get = {
+    options: {
+        cache: {
+            expiresIn: 60000,
+            generateTimeout: 60000
+        }
+    },
+    method: function (id, next) {
+	// logic to get an existing user
+	next(null, user);
+    }
+};
+...
+
+```
+
 [npm-badge]: https://badge.fury.io/js/hapi-methods-injection.svg
 [npm-url]: https://badge.fury.io/js/hapi-methods-injection
 [travis-badge]: https://travis-ci.org/toymachiner62/hapi-authorization.svg?branch=master
