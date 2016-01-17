@@ -2,6 +2,7 @@
 
 > Scan and register automatically your hapi methods
 
+[![npm version][npm-badge]][npm-url]
 [![Build Status][travis-badge]][travis-url]
 [![Coverage Status][coveralls-badge]][coveralls-url]
 [![Dev Dependencies][david-badge]][david-url]
@@ -15,7 +16,8 @@ You can use this plugin to scan specified directories and register all found fun
 # Usage
 
 
-
+[npm-badge]: https://badge.fury.io/js/hapi-methods-injection.svg
+[npm-url]: https://badge.fury.io/js/hapi-methods-injection
 [travis-badge]: https://travis-ci.org/toymachiner62/hapi-authorization.svg?branch=master
 [travis-url]: https://travis-ci.org/amgohan/hapi-methods-injection
 [coveralls-badge]: https://coveralls.io/repos/amgohan/hapi-methods-injection/badge.svg?branch=master&service=github
