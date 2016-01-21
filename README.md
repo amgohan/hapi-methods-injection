@@ -25,18 +25,16 @@ You can use this plugin to scan specified directories and register all found fun
  server.register({
   register: require('hapi-methods-injection'),
   options: {
-		   options: {
-                relativeTo: __dirname,
-                methods: [{
-                    prefix: 'services',
-                    path: './server/api/services'
-                },
-                {
-                    prefix: 'models',
-                    path: './server/api/models'
-                }]
-            }
-  }
+        relativeTo: __dirname,
+        methods: [{
+            prefix: 'services',
+            path: './server/api/services'
+        },
+        {
+            prefix: 'models',
+            path: './server/api/models'
+        }]
+    }
 }, function(err) {
   ...
 });
@@ -87,9 +85,9 @@ module.exports.update = function (user, next) {
  - **UserService.js** :
 ```js
 'use strict';
-const context = require('hapi-methods-injection').methods;
-const User = context.models.User;
+const context = require('hapi-methods-injection');
 module.export.createOrUpdate = function(user, next) {
+	const User = context.methods.models.User;
 	User.get(user.id, function(err, userFound){
 		if(err) return next(err);
 		if(userFound) {
